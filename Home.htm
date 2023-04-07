@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="A:\HTML_projects\Css\Home1.css">
+    <style>
+        body{
+            background-color:chartreuse;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="A:\HTML_projects\Css\nav.css"> -->
+</head>
+<body>
+    <div class="containerC">
+        <div id="container">
+        <div class="ring" id="ring1" ></div>
+        <div class="ring" id="ring2"></div>
+        <div class="ring" id="ring3"></div>
+    </div>
+    <p class="ldng" id="ln1"></p>
+    </div>
+
+    
+</body>
+<script>
+    var letter=['L','o','d','i','n','g','.','.','.','.']
+    var letterCount=0;
+    var htmlP=document.getElementById('ln1');
+
+    function write(){
+        var span=document.createElement('span');
+        var letterIn=document.createTextNode(letter[letterCount]);
+        var finalSpan=span.appendChild(letterIn);
+        htmlP.appendChild(finalSpan);
+
+        letterCount=letterCount+1;
+        if( letterCount==letter.length){
+            letterCount=0;
+            htmlP.innerHTML="";
+        }
+    
+    }
+    setInterval(write,250);
+    
+</script>
+
+</html>

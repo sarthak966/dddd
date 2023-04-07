@@ -1,0 +1,93 @@
+@media(max-width:770px) {
+/* This is the animation for welcome.     */
+    @keyframes typing{
+        from{
+            left:0%;
+        }
+        to{
+            left:100%;
+        }
+    }
+
+
+/* main coding starts from hare */
+
+
+
+.an1_i{
+    overflow: hidden;
+}
+.fun{
+    /* border:2px solid aqua; */
+    position:relative;
+    overflow: hidden;
+    text-shadow: 2px 2px rgb(185, 233, 41);
+}
+/* .fun{
+    
+} */
+.fun::after{
+    content:"";
+    border-left:1px solid black;
+    position:absolute;
+    left:0%;
+    height:100%;
+    width:100%;
+    background-color: rgb(236, 235, 202);
+    animation-name: typing;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(20);
+
+}
+.boxes{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.box{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin:2vw;
+    background-color: brown;
+    border-radius: 9px;
+    height: 30vh;
+    width: 40vw;
+    transition-duration: .2s;
+}
+
+#box1{
+    background-color: #348898;
+}
+#box2{
+    background-color: #79e635;
+}
+#box3{
+    background-color: #e7de5e;
+}
+#box4{
+    background-color: #eb379d;
+}
+.box:hover{
+    opacity:0.7;
+    /* height:31vh; */
+}
+.footer{
+    background-color: #23244a;
+    color:white;
+    display:flex;
+    justify-content: space-between;
+    /* height:15vh; */
+}
+.c:hover{
+    color:blue;
+    cursor:pointer;
+    
+    
+}
+.c{
+    list-style: none;
+    /* margin:1vh; */
+}
+
+}
